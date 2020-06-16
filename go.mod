@@ -1,4 +1,4 @@
-module fwatch
+module github.com/kotazuck/go-fwatch
 
 go 1.14
 
