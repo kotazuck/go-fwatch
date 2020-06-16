@@ -1,6 +1,6 @@
 package main
 
-import "fwatch/internal/fwatch"
+import "github.com/kotazuck/go-fwatch/internal/fwatch"
 
 func main() {
 	fwatch.Main()
