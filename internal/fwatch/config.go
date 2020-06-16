@@ -28,6 +28,13 @@ func Load(path string) (config *Config, err error) {
 	path, err = filepath.Abs(path)
 	print("load config: %s", path)
 
+	_, err = os.Stat(path)
+	if os.IsNotExist(err) {
+		f, _ := os.Create(path)
+		f.WriteString("Targets = []\n")
+		f.Close()
+	}
+
 	// load toml to Config struct
 	if _, err = toml.DecodeFile(path, config); err != nil {
 		print("error: %v", err)
