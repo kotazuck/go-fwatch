@@ -1,4 +1,0 @@
-[[Targets]]
-  Path = "/Users/kotazuck/dev/tmp/hello"
-  Script = "'bash"
-  Type = ["write"]
